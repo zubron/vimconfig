@@ -10,3 +10,5 @@ Add  the following to ~/.vimrc:
 ```
 source ~/.vim/.vimrc
 ```
+
+Also requires [Vundle](https://github.com/gmarik/Vundle.vim)
