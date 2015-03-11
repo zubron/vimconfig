@@ -94,7 +94,11 @@ colorscheme gruvbox
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" Use ibeam cursor in insert mode
 if has("autocmd")
     au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
     au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
 endif
+
+" Delete trailing whitespace
+autocmd FileType python,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
