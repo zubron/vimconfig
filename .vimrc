@@ -45,6 +45,7 @@ let g:indent_guides_enable_on_vim_startup=1
 " Git integration
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Airline settings
 Plugin 'bling/vim-airline'
