@@ -103,3 +103,9 @@ endif
 
 " Delete trailing whitespace
 autocmd FileType python,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" Break the habits...
+map <left> <nop>
+map <right> <nop>
+imap <left> <nop>
+imap <right> <nop>
