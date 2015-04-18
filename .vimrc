@@ -31,6 +31,9 @@ Plugin 'marijnh/tern_for_vim'
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 
+" Rust syntax
+Plugin 'rust-lang/rust.vim'
+
 " Awesomeness ahead
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
