@@ -98,6 +98,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
+
 " Airline settings
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts=1
@@ -168,6 +169,17 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
 "     let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 " endif
+
+
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+ "  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+ ""  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+ "  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 " Delete trailing whitespace
 autocmd FileType python,javascript autocmd BufWritePre <buffer> :%s/\s\+$//e
