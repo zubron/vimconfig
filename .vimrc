@@ -121,6 +121,13 @@ let g:airline_symbols.linenr = ''
 Plugin 'Glench/Vim-Jinja2-Syntax'
 au BufRead,BufNewFile *.j2 setfiletype jinja
 
+" Autocompletion/navigation for Rust
+Plugin 'racer-rust/vim-racer'
+set hidden
+let g:racer_cmd = "racer"
+let $RUST_SRC_PATH="/Users/bridget/.rust/src/rustc-1.6.0/src"
+
+
 " Colorschemes
 Plugin 'ajh17/Spacegray.vim' 
 Plugin 'altercation/vim-colors-solarized'
