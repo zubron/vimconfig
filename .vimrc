@@ -127,7 +127,6 @@ au BufRead,BufNewFile *.j2 setfiletype jinja
 Plugin 'racer-rust/vim-racer'
 set hidden
 let g:racer_cmd = "racer"
-let $RUST_SRC_PATH="/Users/bridget/.rust/src/rustc-1.6.0/src"
 
 
 " Colorschemes
