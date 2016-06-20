@@ -80,7 +80,9 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
+Plugin 'nvie/vim-flake8'
 Plugin 'davidhalter/jedi-vim'
+autocmd BufWritePost *.py call Flake8()
 
 Plugin 'rizzatti/dash.vim'
 
@@ -192,6 +194,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-au BufRead,BufNewFile *.py set cc=73,80
+au FileType python setlocal cc=73,80
 
 set nofoldenable
