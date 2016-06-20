@@ -50,7 +50,10 @@ Plugin 'Raimondi/delimitMate'
 
 " Additional fun things
 Plugin 'scrooloose/nerdtree'
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
+Plugin 'jistr/vim-nerdtree-tabs'
+
 Plugin 'klen/python-mode'
 
 let g:pymode_rope = 0
