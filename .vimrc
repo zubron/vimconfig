@@ -29,6 +29,9 @@ Plugin 'ekalinin/Dockerfile.vim'
 " JavaScript syntax
 Plugin 'jelera/vim-javascript-syntax'
 
+" RAML syntax highlighting
+Plugin 'IN3D/vim-raml'
+
 " Additional JavaScript magic
 Plugin 'pangloss/vim-javascript'
 
