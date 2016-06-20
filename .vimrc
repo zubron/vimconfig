@@ -8,6 +8,7 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set mouse=a
+set cursorline
 
 let mapleader = ","
 set nocompatible              " be iMproved, required
