@@ -6,6 +6,7 @@ set background=dark
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set mouse=a
 
 let mapleader = ","
@@ -133,6 +134,27 @@ Plugin 'racer-rust/vim-racer'
 set hidden
 let g:racer_cmd = "racer"
 
+" Go support
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'fatih/vim-go'
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+au FileType go nmap <Leader>gc :GoDecls<CR>
+au FileType go nmap <Leader>gv :GoDeclsDir<CR>
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " Colorschemes
 Plugin 'ajh17/Spacegray.vim' 
